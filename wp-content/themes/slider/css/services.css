@@ -1,0 +1,180 @@
+.section-services {
+    margin-top: 20px;
+    margin-left: 15vw;
+}
+
+.services-header {
+    margin-bottom: 40px;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.services-header h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.book-call-link {
+    background-color: #f5f5dc;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold;
+    margin-left: auto;
+    font-size: 16px;
+}
+
+.book-call-link i {
+    margin-left: 10px;
+}
+
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    margin-top: 30px;
+}
+
+.service-card {
+    width: 250px;
+    height: 350px;
+    perspective: 1000px;
+}
+
+.service-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.service-card-front,
+.service-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.service-card-front {
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.service-card-front:hover {
+    background-size: 300%;
+}
+
+.service-card-footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border-radius: 0 0 8px 8px;
+}
+
+.flip-button {
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.flip-button.flip-back {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.service-card-back {
+    background: peachpuff;
+    color: #333;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.service-card-content {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.service-card-content h6 {
+    color: #888;
+    margin: 0;
+    font-size: 14px;
+}
+
+.service-card-content h2 {
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.service-card-content h4 {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.service-card-back .quote-link {
+    color: lightcoral;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.quote-link:hover i {
+    animation: fidget 1s infinite;
+}
+
+@keyframes fidget {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
